@@ -1,0 +1,16 @@
+{{#if unauthorised }}
+<span class="warning">Sorry, we didn't recognise that passcode!</span>
+{{/if}}
+<h1>
+    <span class="lead">
+        <i>W</i><i>i</i><i>t</i><i>t</i><i>e</i><i>r</i><i>-</i><i>O</i><i>n</i>
+    </span>
+    <span class="sub-heading">An invite only chat app</span>
+</h1>
+<form action="/passcode" id="form" method="POST">
+    <label for="passcode">
+        <span>Enter your passcode:</span>
+    </label>
+    <input type="text" name="passcode" id="passcode" />
+    <button>Enter</button>
+</form>

@@ -10,6 +10,15 @@ $largeScreen: 950px;
 $headingFont: pika-ultra-script, 'Brush Script MT', cursive;
 $bodyFont: 'hoss-round', Arial, sans-serif;
 
+span.warning {
+    display: block;
+    font-family: $bodyFont;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #b5010a;
+}
+
 .home {
     display: flex;
     flex-direction: column;

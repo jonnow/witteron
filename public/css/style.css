@@ -35,6 +35,15 @@ textarea {
   white-space: revert;
 }
 
+span.warning {
+  display: block;
+  font-family: "hoss-round", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #b5010a;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -124,6 +133,57 @@ button {
 }
 button:hover {
   background-color: #ffdb31;
+}
+
+body.chatroom {
+  margin: 0;
+  padding-bottom: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+body.chatroom #form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+body.chatroom #input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+body.chatroom #input:focus {
+  outline: none;
+}
+body.chatroom #form > button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+body.chatroom #messageLog {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body.chatroom #messageLog > li {
+  padding: 0.5rem 1rem;
+}
+body.chatroom #messageLog > li:nth-child(odd) {
+  background: #efefef;
+}
+body.chatroom #messageLog > li.sys-message {
+  background-color: #f4f9ff;
 }
 
 /*# sourceMappingURL=style.css.map */
