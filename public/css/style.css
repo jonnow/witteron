@@ -1,0 +1,129 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol, ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7941d;
+}
+
+h1 {
+  margin-top: -4rem;
+  text-align: center;
+}
+h1 span {
+  display: block;
+}
+h1 span.lead {
+  text-shadow: 1px 1px 0 #b09000, 2px 2px 0 #b09000, 3px 3px 0 #b09000;
+  font-family: pika-ultra-script, "Brush Script MT", cursive;
+  font-size: 5rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 150%;
+}
+@media screen and (min-width: 950px) {
+  h1 span.lead {
+    font-size: 9rem;
+  }
+}
+h1 span.lead i:nth-child(odd) {
+  color: #FFE400;
+}
+h1 span.lead i:nth-child(even) {
+  color: #ffd617;
+}
+h1 span.sub-heading {
+  line-height: 135%;
+  font-family: "hoss-round", Arial, sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #ffffff;
+}
+@media screen and (min-width: 950px) {
+  h1 span.sub-heading {
+    font-size: 4rem;
+  }
+}
+
+form {
+  display: flex;
+  margin-top: 2rem;
+  font-family: "hoss-round", Arial, sans-serif;
+  font-size: 1rem;
+  color: #121212;
+}
+
+label > span {
+  font-size: 1.35rem;
+  font-style: italic;
+  display: inline-block;
+  line-height: 150%;
+  margin-top: 7px;
+}
+
+input, button {
+  font-size: 1.5rem;
+  border-radius: 45px;
+  border: 2px solid #d97a08;
+}
+
+input[type=text] {
+  background-color: white;
+  padding: 7px 16px 4px;
+  margin: 0 0.65rem;
+}
+
+button {
+  padding: 7px 8px 4px;
+  min-width: 8.75rem;
+  background-color: #ffd617;
+  font-family: "hoss-round", Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.35s ease;
+}
+button:hover {
+  background-color: #ffdb31;
+}
+
+/*# sourceMappingURL=style.css.map */

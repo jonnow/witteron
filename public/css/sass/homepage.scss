@@ -1,0 +1,105 @@
+$shadow: #b09000;
+$even: #ffd617;
+$odd: #FFE400;
+$background: #f7941d;
+$subHeading: #ffffff;
+$darkText: #121212;
+
+$largeScreen: 950px;
+
+$headingFont: pika-ultra-script, 'Brush Script MT', cursive;
+$bodyFont: 'hoss-round', Arial, sans-serif;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    background-color: $background;
+}
+
+h1 {
+    margin-top: -4rem;
+    text-align: center;
+    span {
+        display: block;
+    }
+    span.lead {
+        text-shadow: 1px 1px 0 $shadow,
+                     2px 2px 0 $shadow,
+                     3px 3px 0 $shadow;
+        font-family: $headingFont;
+        font-size: 5rem;
+        @media screen and (min-width: $largeScreen) {
+            font-size: 9rem;
+        }
+        font-style: italic;
+        font-weight: bold;
+        line-height: 150%;
+        i {
+            &:nth-child(odd) {
+                color: $odd;
+            }
+            &:nth-child(even) {
+                color: $even;
+            }
+        }
+    }
+    span.sub-heading {
+        line-height: 135%;
+        font-family: $bodyFont;
+        font-size: 2rem;
+        @media screen and (min-width: $largeScreen) {
+            font-size: 4rem;
+        }
+        font-style: italic;
+        font-weight: bold;
+        color:$subHeading;
+    }
+}
+
+// Passcode styling
+form {
+    display: flex;
+    margin-top: 2rem;
+    font-family: $bodyFont;
+    font-size: 1rem;
+    color: $darkText;
+}
+
+label > span {
+    font-size: 1.35rem;
+    font-style: italic;
+    display: inline-block;
+    line-height: 150%;
+    margin-top: 7px;
+}
+
+input, button {
+    font-size: 1.5rem;
+    border-radius: 45px;
+    border: 2px solid darken($background, 10%);
+}
+
+input[type=text] {
+    background-color: white;
+    padding: 7px 16px 4px;
+    margin: 0 .65rem;
+    
+}
+
+button {
+    padding: 7px 8px 4px;
+    min-width: 8.75rem; // 140px;
+    background-color: $even;
+    font-family: $bodyFont;
+    font-style: italic;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .35s ease;
+    &:hover {
+        background-color: lighten($even, 5%);
+    }
+}

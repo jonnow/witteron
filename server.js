@@ -1,19 +1,28 @@
 require('dotenv').config()
+const fastify = require('fastify')({logger: true})
 const socketIo = require('socket.io')
-const fastify = require('fastify')({
-    logger: true
+const path = require('path')
+
+fastify.register(require('fastify-static'), {
+    root: path.join(__dirname, 'public'),
+    prefix: '/public/'
 })
 
 fastify.register(require('point-of-view'), {
     engine: {
-        ejs: require('ejs'),
+        handlebars: require('handlebars'),
     },
 })
 
 fastify.register(require('./app/routes/chat'), { prefix: 'chats'})
 
 fastify.get('/', (req, reply) => {
-    reply.view('./templates/index.ejs')
+    let params = { bodyClass: 'home' }
+    reply.view('./templates/index.hbs', params)
+})
+
+fastify.post('/passcode', (req, reply) => {
+    debugger;
 })
 
 fastify.listen(process.env.PORT, (err, address) => {
