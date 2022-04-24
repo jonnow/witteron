@@ -1,2 +1,2 @@
-# witts-chat
-An invite only instant messaging app built with Node and Sockets.
+# witterOn
+An invite only instant messaging app built with Node, Fastify and Socket.io.
